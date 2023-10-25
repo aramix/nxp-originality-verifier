@@ -4,4 +4,12 @@
 
 ## 0.0.2
 
-* Fixed tests, optimized code
+* Fixed tests, optimized code.
+
+## 0.0.3
+
+* Updated readme and tests to use cascading.
+
+## 0.0.4
+
+* Flutter and Dart SDK updates

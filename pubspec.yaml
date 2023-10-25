@@ -1,11 +1,11 @@
 name: nxp_originality_verifier
 description: Flutter package to veryify NXP tag originality against known or provided list of public keys
-version: 0.0.2
+version: 0.0.4
 homepage: https://github.com/aramix/nxp-originality-verifier
 
 environment:
-  sdk: '>=3.1.4 <4.0.0'
-  flutter: '>=1.20.0'
+  sdk: '>=3.1.3 <4.0.0'
+  flutter: '>=3.13.8'
 
 dependencies:
   ecdsa: ^0.1.0
@@ -29,10 +29,6 @@ flutter:
         package: com.coinplus.nxp_originality_verifier
         pluginClass: OriginalityVerifier
       ios:
-        pluginClass: OriginalityVerifier
-      macos:
-        pluginClass: OriginalityVerifier
-      linux:
         pluginClass: OriginalityVerifier
 
   # To add assets to your package, add an assets section, like this:

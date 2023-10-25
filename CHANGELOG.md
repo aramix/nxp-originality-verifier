@@ -13,3 +13,7 @@
 ## 0.0.4
 
 * Flutter and Dart SDK updates
+
+## 0.0.5
+
+* Cleanup

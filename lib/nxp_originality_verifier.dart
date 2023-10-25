@@ -17,7 +17,7 @@ class OriginalityVerifier {
     return bytes.map((byte) => byte.toRadixString(16).padLeft(2, '0')).join();
   }
 
-  bool verifyOriginality(Uint8List tagId, Uint8List signature) {
+  bool verify(Uint8List tagId, Uint8List signature) {
     final R = BigInt.parse(_bytesToHex(signature.sublist(0, 16)), radix: 16);
     final S = BigInt.parse(_bytesToHex(signature.sublist(16)), radix: 16);
 

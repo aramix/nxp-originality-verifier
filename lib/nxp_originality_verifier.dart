@@ -1,8 +1,8 @@
 library nxp_originality_verifier;
 
 import 'dart:typed_data';
-import 'package:ecdsa/ecdsa.dart';
-import 'package:elliptic/elliptic.dart';
+import 'package:ecdsa/ecdsa.dart' as ecdsa show Signature, verify;
+import 'package:elliptic/elliptic.dart' show PublicKey, getSecp128r1;
 import './known_public_keys.dart';
 
 class OriginalityVerifier {
@@ -20,9 +20,8 @@ class OriginalityVerifier {
   bool verifyOriginality(Uint8List tagId, Uint8List signature) {
     final R = BigInt.parse(_bytesToHex(signature.sublist(0, 16)), radix: 16);
     final S = BigInt.parse(_bytesToHex(signature.sublist(16)), radix: 16);
-    // ignore: avoid_print
-    print(verify(_publicKeys.elementAt(0), tagId, Signature.fromRS(R, S)));
-    return _publicKeys
-        .any((publicKey) => verify(publicKey, tagId, Signature.fromRS(R, S)));
+
+    return _publicKeys.any((publicKey) =>
+        ecdsa.verify(publicKey, tagId, ecdsa.Signature.fromRS(R, S)));
   }
 }

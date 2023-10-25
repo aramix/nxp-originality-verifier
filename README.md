@@ -2,7 +2,7 @@ Flutter package to veryify NXP tag originality signature against known or provid
 
 ## Features
 
-Check NTAG
+Verifies originality of NTAG, Mifare UL or MIFARE UL EV1 tags
 
 ## Usage
 

@@ -23,6 +23,17 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.coinplus.nxp_originality_verifier
+        pluginClass: OriginalityVerifier
+      ios:
+        pluginClass: OriginalityVerifier
+      macos:
+        pluginClass: OriginalityVerifier
+      linux:
+        pluginClass: OriginalityVerifier
 
   # To add assets to your package, add an assets section, like this:
   # assets:

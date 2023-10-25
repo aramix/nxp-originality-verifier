@@ -1,6 +1,6 @@
 name: nxp_originality_verifier
 description: Dart package to veryify NXP tag originality against known or provided list of public keys
-version: 0.0.5
+version: 0.0.6
 homepage: https://github.com/aramix/nxp-originality-verifier
 
 environment:
